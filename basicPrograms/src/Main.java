@@ -2,7 +2,8 @@ import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
+
+    static void basicPrograms(){
         // to sAY HELLO
         System.out.println("Hello and welcome!");
 
@@ -14,20 +15,19 @@ public class Main {
         }
 
 
-// 	Output “Hello” 5 times, using a loop
+        // 	Output “Hello” 5 times, using a loop
         for (int i=0; i<5; i++){
             System.out.println("Hello");
         }
 
 
+        //  pass mark calculator
+        // 1. Declare an integer variable called “mark” and assign it the value 56.
+        // Output whether a student has pass or failed (pass mark is 50).
+        // Is this enough to fully test the program? which other values of “mark” should you try?
 
-//  pass mark calculator
-// 1. Declare an integer variable called “mark” and assign it the value 56.
-// Output whether a student has pass or failed (pass mark is 50).
-// Is this enough to fully test the program? which other values of “mark” should you try?
-
-// 3.	Amend the mark program so that it asks for a mark to be input.
-//      Make sure you run it with sufficient data to fully test the program.
+        // 3.	Amend the mark program so that it asks for a mark to be input.
+        //      Make sure you run it with sufficient data to fully test the program.
 
         Scanner obj = new Scanner(System.in);
         System.out.println("Enter student mark: ");
@@ -40,7 +40,7 @@ public class Main {
 
 
 
-// convert miles to kilometer (e.g: 5 miles = 8km)
+        // convert miles to kilometer (e.g: 5 miles = 8km)
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter distance in miles:");
 
@@ -50,39 +50,73 @@ public class Main {
 
 
 
-//  The program asks for a price, quantity and product name and outputs the total cost including a VAT of 20%.
-          Scanner sc = new Scanner(System.in);
-          System.out.println("Enter product name:");
-          Scanner sc1 = new Scanner(System.in);
-          System.out.println("Enter product price:");
-          Scanner sc2 = new Scanner(System.in);
-          System.out.println("Enter product quantity:");
+        //  The program asks for a price, quantity and product name and outputs the total cost including a VAT of 20%.
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter product name:");
+        Scanner sc1 = new Scanner(System.in);
+        System.out.println("Enter product price:");
+        Scanner sc2 = new Scanner(System.in);
+        System.out.println("Enter product quantity:");
 
-          String productName = sc.nextLine();
-          double productPrice = sc1.nextDouble();
-          int productQuantity = sc2.nextInt();
+        String productName = sc.nextLine();
+        double productPrice = sc1.nextDouble();
+        int productQuantity = sc2.nextInt();
 
-          double total = productPrice * productQuantity;
-          double total_with_VAT = total + (total*0.02);
+        double total = productPrice * productQuantity;
+        double total_with_VAT = total + (total*0.02);
 
-          System.out.println("The total price for " + productName +" is " + total_with_VAT);
+        System.out.println("The total price for " + productName +" is " + total_with_VAT);
 
 
 
-// Amend 3, so that it keeps asking for a mark until the user inputs -1.
-            Scanner input = new Scanner(System.in);
-            int student_mark;
-            while (true){
-                System.out.println("Enter student mark: ");
-                student_mark = input.nextInt();
-                if(student_mark == -1){
-                    System.out.println("student has failed");
-                    break;
-                }
-                else{
-                    System.out.println("not quite the expected value");
-                }
+        // Amend 3, so that it keeps asking for a mark until the user inputs -1.
+        Scanner input = new Scanner(System.in);
+        int student_mark;
+        while (true){
+            System.out.println("Enter student mark: ");
+            student_mark = input.nextInt();
+            if(student_mark == -1){
+                System.out.println("student has failed");
+                break;
             }
+            else{
+                System.out.println("not quite the expected value");
+            }
+        }
+    }
+
+    static void compoundInterest(){
+        Scanner input = new Scanner(System.in);
+
+        double principal;
+        double amount;
+        double rate;
+        int years;
+        int timesCompounded;
+
+        System.out.print("Enter principal amount: ");
+        principal = input.nextDouble();
+
+        System.out.print("Enter the interest rate (in %): ");
+        rate = input.nextDouble();
+
+        System.out.print("Enter the years: ");
+        years = input.nextInt();
+
+        System.out.print("Enter the amount of times compounded: ");
+        timesCompounded = input.nextInt();
+
+        amount = principal * Math.pow((1+(rate/timesCompounded)), (timesCompounded*years));
+        System.out.printf("The amount for $%.2f in %d years is $%.2f",principal, years, amount);
+
+        input.close();
+    }
+
+
+
+    public static void main(String[] args) {
+        //basicPrograms();
+        compoundInterest();
 
     }
 }
