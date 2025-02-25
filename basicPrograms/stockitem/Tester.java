@@ -9,7 +9,7 @@ public class Tester {
 //        bob.doDelivery(13);
 //        System.out.println(bob.getStockLevel());
 //        System.out.println(bob.getDescription());
-//        System.out.println(bob);
+        System.out.println(bob);
 
     }
 }

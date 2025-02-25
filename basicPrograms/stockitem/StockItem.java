@@ -13,6 +13,14 @@ class StockItem {
         this.price = price;
     }
 
+    StockItem(String description, int level, double price, Date sellByDate) {
+        this.description = description;
+        this.level = level;
+        this.price = price;
+        this.sellByDate = sellByDate;
+    }
+
+
 //    public void printReport(){
 //        System.out.println("****Stock Report*****");
 //        System.out.printf("Item: %s%n", this.description);

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/household/household.iml" filepath="$PROJECT_DIR$/household/household.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java_fundamentals.iml" filepath="$PROJECT_DIR$/.idea/java_fundamentals.iml" />
     </modules>
   </component>
