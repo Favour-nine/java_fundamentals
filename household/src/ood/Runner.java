@@ -45,6 +45,11 @@ public class Runner
         smiths.addDog("Fido", "Terrier");  // alternative way to add a dog in Family
         
         // how to display dog data ??
+        System.out.println("***** Using showAllDogs()");
+        smiths.showAllDogs();
+
+        System.out.println("***** Using getAllDogs()");
+        System.out.println(smiths.getAllDogs());
         
     }
 }

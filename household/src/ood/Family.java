@@ -12,7 +12,7 @@ public class Family
 {
     private String mother;
     private String father;
-    private Person[] children ;     // declare an array
+    private Person[] children;     // declare an array
     private int childCount;
     private ArrayList<Dog> myDogs;  // declare ArrayList
     // declare a collection of children - what type of object will be stored ??? 
@@ -26,6 +26,7 @@ public class Family
         myDogs = new ArrayList<Dog>(); // create ArrayList
         // create the collection of children
         children = new Person[5]; // create fixed size array
+        childCount = 0;
     }
     
     // using arrays
@@ -34,8 +35,10 @@ public class Family
     /* add Person object**/
     public void addChild(Person ch)
     {
-        children[childCount] = ch;
-        childCount = childCount + 1;
+        if (childCount < children.length){
+            children[childCount] = ch;
+            childCount++;
+        }
     }
 
     // output all elements
@@ -59,6 +62,7 @@ public class Family
             Person xx = children[index];
             s = s + xx.getAsString() +"\n";
             //OR  in one line of code ??
+            // s = s + children[index].getAsString() + "\n"
         }
         return s;
     }
@@ -74,7 +78,8 @@ public class Family
     
     public void removeAChild(int position)
     {
-        //????
+        children[position] = null; // not correct
+        childCount = childCount - 1;
     }
     
     //Searching
@@ -114,7 +119,12 @@ public class Family
     // remove a child by name ? find it first and then ??
     public void removeAChild(String name )
     {
-        //????
+        for(int i=0; i<childCount; i++) {
+            if (children[i].getName().equals(name)) {
+                children[i] = null;
+            }
+        };
+        childCount--;
     }
     
     
@@ -193,6 +203,13 @@ public class Family
     } 
     
    // write a method: "getAllDogs()"
+    public String getAllDogs(){
+        String all = "";
+        for (Dog myDog : myDogs) {
+            all = all + myDog.getAsString() + "\n" ;
+        }
+        return all;
+    }
  
 } 
 

@@ -52,7 +52,7 @@ public class Dog
     public String getAsString()
     {
         return "Dog Name: " + name + "\nBreed: " + breed + "\nAge: "
-                + age + "\nDOB:  " + dob.getAsString();
+                + age + "\nDOB:  " + dob.getAsString() + "\n";
     }
 
 
