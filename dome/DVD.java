@@ -45,16 +45,8 @@ public class DVD extends Item
      */
     public void print()
     {
-//        System.out.print("DVD: " + title + " (" + playingTime + " mins)");
-//        if(gotIt)
-//        {
-//            System.out.println("*");
-//        }
-//        else
-//        {
-//            System.out.println();
-//        }
-        System.out.println("    " + director);
+        super.print();
+        System.out.println("Director: " + director);
 //        System.out.println("    " + comment);
     }
 }

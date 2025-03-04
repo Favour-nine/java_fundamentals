@@ -34,4 +34,11 @@ public class Item {
     {
         return title;
     }
+
+    public void print(){
+        System.out.println(title);
+        System.out.println(playingTime);
+        System.out.println(gotIt);
+        System.out.println(comment);
+    }
 }
