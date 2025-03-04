@@ -6,7 +6,7 @@ public class StockList {
     private ArrayList<StockItem> warehouse;
 
     public StockList() {
-        warehouse = new ArrayList<StockItem>();
+        warehouse = new ArrayList<>();
     }
 
     public void addStockItem(StockItem item) {
@@ -46,14 +46,22 @@ public class StockList {
     }
 
     public String getItem(String description){
-        if(description.equals(StockItem.getDescription())){
-            return StockItem.
-        } else {
-            return null;
+        String result = "";
+        for (int i = 0; i < warehouse.size(); i++) {
+            if(warehouse.get(i).getDescription().equals(description)) {
+                result = warehouse.get(i).toString();
+            } else {
+                result = "null";
+            }
         }
+        return result;
     };
 
-    public static void createNewStockItem(String description, int level, double price){
+    public void createNewStockItem(String description, int level, double price){
+        // pass it into a stock item object
+        StockItem newItem = new StockItem(description, level, price);
+        // then pass that object into addStockItem
+//        warehouse.add(newItem);
 
     }
 

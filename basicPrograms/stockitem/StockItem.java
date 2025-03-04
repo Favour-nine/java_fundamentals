@@ -54,7 +54,7 @@ class StockItem {
         return this.level;
     }
 
-    public static String getDescription(){
+    public  String getDescription(){
         return this.description;
     }
 
