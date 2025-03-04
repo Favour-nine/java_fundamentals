@@ -10,16 +10,20 @@ public class TestList {
         testList.addStockItem(item1);
         testList.addStockItem(item2);
 
-        testList.removeItem(3);
+        testList.removeItem(4);
 
         int a = testList.noOfStockItems();
-        System.out.println(a);
+        System.out.println("noOfStockItems: "+ a);
 
-//        testList.showAllItems();
-//        System.out.println(testList.getAllItems());
+        testList.createNewStockItem("biscuit", 12, 34);
 
-//        System.out.println(testList.getItem(0));
+        testList.showAllItems();
+        System.out.println(testList.getAllItems());
+
+        System.out.println(testList.getItem(2));
         System.out.println(testList.getItem("damn"));
+
+
     }
 
 }

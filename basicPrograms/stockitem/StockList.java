@@ -58,11 +58,10 @@ public class StockList {
     };
 
     public void createNewStockItem(String description, int level, double price){
-        // pass it into a stock item object
+        // pass it into a stockItem object
         StockItem newItem = new StockItem(description, level, price);
         // then pass that object into addStockItem
-//        warehouse.add(newItem);
-
+        addStockItem(newItem);
     }
 
 }
